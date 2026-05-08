@@ -129,7 +129,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
         </div>
 
         {/* TABLE SECTION */}
-        <div className="bg-white dark:bg-slate-900 overflow-x-auto">
+        <div className="bg-white dark:bg-slate-900 overflow-x-auto w-full">
           <Table>
             <TableHeader className="bg-gray-50 dark:bg-slate-800/50">
               <TableRow className="hover:bg-transparent border-b dark:border-slate-800">
