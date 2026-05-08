@@ -17,7 +17,7 @@ import {
 
 export default function TaskHeader({ selectedCount, onDeleteAll }: { selectedCount: number; onDeleteAll: () => void }) {
   return (
-    <div className="flex justify-between items-center mb-6">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
       <h2 className="text-2xl font-bold tracking-tight text-white">
         Manage <span className="font-light">Tasks</span>
       </h2>
