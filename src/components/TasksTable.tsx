@@ -26,18 +26,15 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import AddTasks from './AddTasks'
 import UpdateTasks from './UpdateTasks'
 import { toast } from 'sonner'
 import { PaginationIconsOnly } from './TaskPagination'
 import ViewTask from './ViewTask'
-import { Input } from './ui/input'
-import ModeToggle from './ModeToggle'
-import Link from 'next/link'
+
 import TaskHeader from './Header'
 import TaskFilters from './Filter'
 import { EmptyState } from './EmptyState'
+import TaskStats from './TaskStats'
 
 export default function TaskTable({ tasks }: { tasks: Task[] }) {
   const router = useRouter()
@@ -117,6 +114,9 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
       <div className="w-full max-w-6xl mx-auto my-10 shadow-xl rounded-xl overflow-hidden border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900">
         {/* HEADER SECTION */}
         <div className="bg-[#435d7d] dark:bg-slate-800 p-6 text-white">
+          {/*  Analytics Section */}
+          <TaskStats tasks={tasks} />
+          {/* HEADER WITH ACTIONS */}
           <TaskHeader selectedCount={selectedIds.length} onDeleteAll={handleDeleteAll} />
 
           {/* FILTERS SECTION */}
